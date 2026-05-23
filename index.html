@@ -23,15 +23,43 @@
 </header>
 
 <section class="tecito">
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('lumooos', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#00b9fe',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
+<!-- KO-FI SECTION -->
+<section class="kofi-section">
+    <div class="kofi-container">
+
+        <div class="kofi-text">
+            <span class="kofi-tag">Apoya a Lumooos</span>
+
+            <h2>¿Te gusta lo que hago?</h2>
+
+            <p>
+                Si quieres apoyar a <strong>Lumooos</strong>, puedes invitarme un cafecito en Ko-fi ☕
+                Tu apoyo me ayuda a seguir creando proyectos, dibujos, contenido y más.
+            </p>
+
+            <a href="https://ko-fi.com/lumooos" target="_blank" class="kofi-button">
+                ☕ Apoyar en Ko-fi
+            </a>
+        </div>
+
+        <div class="kofi-card">
+            <div class="coffee-glow"></div>
+
+            <img 
+                src="https://storage.ko-fi.com/cdn/kofi5.png" 
+                alt="Ko-fi Logo"
+                class="kofi-logo"
+            >
+
+            <p class="kofi-link">
+                ko-fi.com/lumooos
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
     <!-- <h2>Invitame un Tecito ☕</h2>
     <p>Si te gusta mi arte, podés apoyarme:</p>
 
@@ -71,3 +99,147 @@
 
 </body>
 </html>
+
+<style>
+.kofi-section{
+    width:100%;
+    padding:90px 20px;
+    background:linear-gradient(180deg,#0f0f14,#161621);
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+.kofi-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.kofi-text{
+    flex:1;
+    min-width:300px;
+}
+
+.kofi-tag{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:999px;
+    background:#ff5f5f20;
+    color:#ff7676;
+    font-size:14px;
+    margin-bottom:18px;
+    border:1px solid #ff767650;
+}
+
+.kofi-text h2{
+    color:white;
+    font-size:48px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.kofi-text p{
+    color:#b8b8c5;
+    font-size:18px;
+    line-height:1.7;
+    max-width:550px;
+    margin-bottom:35px;
+}
+
+.kofi-button{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    background:linear-gradient(135deg,#ff5f5f,#ff8a5c);
+    color:white;
+    padding:16px 30px;
+    border-radius:18px;
+    font-weight:600;
+    font-size:17px;
+    transition:0.3s ease;
+    box-shadow:0 10px 30px rgba(255,95,95,0.35);
+}
+
+.kofi-button:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 14px 40px rgba(255,95,95,0.5);
+}
+
+.kofi-card{
+    position:relative;
+    width:340px;
+    height:340px;
+    border-radius:32px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.coffee-glow{
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:#ff5f5f;
+    filter:blur(120px);
+    opacity:0.25;
+}
+
+.kofi-logo{
+    width:140px;
+    z-index:2;
+    animation:float 4s ease-in-out infinite;
+}
+
+.kofi-link{
+    margin-top:24px;
+    color:#ffffffcc;
+    font-size:16px;
+    z-index:2;
+    letter-spacing:1px;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+@media(max-width:900px){
+
+    .kofi-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .kofi-text h2{
+        font-size:38px;
+    }
+
+    .kofi-text p{
+        margin:auto;
+        margin-bottom:30px;
+    }
+
+    .kofi-card{
+        width:100%;
+        max-width:340px;
+        height:320px;
+    }
+}
+</style>
